@@ -10,7 +10,14 @@ Source0:	http://dl.sourceforge.net/drivel/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-desktop.patch
 URL:		http://www.dropline.net/drivel/
 BuildRequires:	curl-devel
-BuildRequires:	gtk+2-devel
+BuildRequires:	gnome-vfs2-devel >= 2.6.0
+BuildRequires:	gtk+2-devel >= 2:2.4.0
+BuildRequires:	gtksourceview-devel >= 1.0.0
+BuildRequires:	gtkspell-devel >= 1:2.0
+BuildRequires:	libgnomeui-devel >= 2.0.0
+BuildRequires:	pkgconfig
+BuildRequires:	rhythmbox
+BuildRequires:	scrollkeeper >= 0.3.5
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
