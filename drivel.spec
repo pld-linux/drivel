@@ -1,12 +1,12 @@
 Summary:	A LiveJournal client for GNOME
 Summary(pl):	Klient LiveJournala dla GNOME
 Name:		drivel
-Version:	1.0.0
+Version:	1.0.2
 Release:	1
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/drivel/%{name}-%{version}.tar.bz2
-# Source0-md5:	80fefa6411df121d9a7e20781b1988dc
+# Source0-md5:	eac32dba1e154589c95c53de53e1204d
 URL:		http://www.sf.net/projects/drivel/
 BuildRequires:	curl-devel
 BuildRequires:	gtk+2-devel
