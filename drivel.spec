@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/drivel/%{name}-%{version}.tar.bz2
 URL:		http://www.sf.net/projects/drivel/
 BuildRequires:	curl-devel
 BuildRequires:	gtk+2-devel
+Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,7 +27,8 @@ o u¿ywalno¶ci. Prezentuje elegancki interfejs u¿ytkownika.
 %setup -q
 
 %build
-%configure --disable-schemas-install
+%configure \
+	--disable-schemas-install
 %{__make}
 
 
@@ -38,6 +40,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name} --with-gnome
 
+%clean
+rm -r $RPM_BUILD_ROOT
+
+%post
+%gconf_schema_install
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
@@ -45,11 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*
 %{_desktopdir}/*
 %{_sysconfdir}/gconf/schemas/*
+%dir %{_datadir}/drivel
+%dir %{_datadir}/drivel/glade
 %{_datadir}/drivel/glade/drivel.glade
-
-
-%post
-%gconf_schema_install
-
-%clean
-rm -r $RPM_BUILD_ROOT
