@@ -8,3 +8,25 @@ diff -urN drivel-1.2.1.orig/data/drivel.desktop.in drivel-1.2.1/data/drivel.desk
 -Categories=GNOME;Application;Network
 +Categories=GNOME;Network
  StartupNotify=true
+--- drivel-1.2.2/configure~	Wed Nov 10 12:48:06 2004
++++ drivel-1.2.2/configure	Wed Nov 10 12:48:06 2004
+@@ -20248,7 +20248,7 @@
+ 
+ fi
+ 
+-ALL_LINGUAS="cs de en_CA en_GB es ja nl no pa pt pt_BR sq sr sr@Latn sv zh_CN"
++ALL_LINGUAS="cs de en_CA en_GB es ja nb nl pa pt pt_BR sq sr sr@Latn sv zh_CN"
+ 
+ 
+ for ac_header in locale.h
+--- drivel-1.2.2/configure.ac~	Wed Nov 10 12:47:51 2004
++++ drivel-1.2.2/configure.ac	Wed Nov 10 12:47:51 2004
+@@ -155,7 +155,7 @@
+    AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
+ fi
+ 
+-ALL_LINGUAS="cs de en_CA en_GB es ja nl no pa pt pt_BR sq sr sr@Latn sv zh_CN"
++ALL_LINGUAS="cs de en_CA en_GB es ja nb nl pa pt pt_BR sq sr sr@Latn sv zh_CN"
+ AM_GLIB_GNU_GETTEXT
+ 
+ AC_OUTPUT([
