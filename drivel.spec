@@ -1,20 +1,26 @@
 Summary:	A LiveJournal client for GNOME
+Summary(pl):	Klient LiveJournala dla GNOME
 Name:		drivel
 Version:	0.9.1
 Release:	1
 License:	GPL
 Group:		Applications/Communication
-Url:		http://www.sf.net/projects/drivel
 Source0:	http://dl.sourceforge.net/drivel/%{name}-%{version}.tar.bz2
 # Source0-md5:	148bc826935b8cd19a035542c5076cbc
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-BuildRequires:	gtk+2-devel
+URL:		http://www.sf.net/projects/drivel/
 BuildRequires:	curl-devel
+BuildRequires:	gtk+2-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Drivel is an advanced LiveJournal client for the GNOME desktop. While
 maintaining a full set of features, it had been designed with
 usability in mind, and presents an elegant user interface.
+
+%description -l pl
+Drivel to zaawansowany klient LiveJournala dla ¶rodowiska GNOME. Przy
+zachowaniu pe³nego zbioru mo¿liwo¶ci, zosta³ on zaprojektowany z my¶l±
+o u¿ywalno¶ci. Prezentuje elegancki interfejs u¿ytkownika.
 
 %prep
 %setup -q
@@ -25,15 +31,17 @@ usability in mind, and presents an elegant user interface.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO COPYING ChangeLog
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/pixmaps/*
-%{_datadir}/applications/*
-/etc/gconf/schemas/*
+%{_pixmapsdir}/*
+%{_desktopdir}/*
+%{_sysconfdir}/gconf/schemas/*
 
 %clean
 rm -r $RPM_BUILD_ROOT
