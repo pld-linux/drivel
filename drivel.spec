@@ -29,13 +29,14 @@ o u¿ywalno¶ci. Prezentuje elegancki interfejs u¿ytkownika.
 %configure --disable-schemas-install
 %{__make}
 
-%find_lang %{name} --with-gnome
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
