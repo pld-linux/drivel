@@ -1,12 +1,12 @@
 Summary:	A LiveJournal client for GNOME
 Summary(pl):	Klient LiveJournala dla GNOME
 Name:		drivel
-Version:	0.9.3
+Version:	0.90.0
 Release:	1
 License:	GPL v2
-Group:		Applications/Communication
+Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/drivel/%{name}-%{version}.tar.bz2
-# Source0-md5:	6ef23a2ebc64a556d1c561d349566083
+# Source0-md5:	794e395f6b6ab1bb102706bed478b616
 URL:		http://www.sf.net/projects/drivel/
 BuildRequires:	curl-devel
 BuildRequires:	gtk+2-devel
@@ -26,8 +26,10 @@ o u¿ywalno¶ci. Prezentuje elegancki interfejs u¿ytkownika.
 %setup -q
 
 %build
-%configure
+%configure --disable-schemas-install
 %{__make}
+
+%find_lang %{name} --with-gnome
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -35,13 +37,18 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/*
 %{_desktopdir}/*
 %{_sysconfdir}/gconf/schemas/*
+%{_datadir}/drivel/glade/drivel.glade
+
+
+%post
+%gconf_schema_install
 
 %clean
 rm -r $RPM_BUILD_ROOT
