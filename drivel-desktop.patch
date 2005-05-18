@@ -1,8 +1,13 @@
 diff -urN drivel-1.2.1.orig/data/drivel.desktop.in drivel-1.2.1/data/drivel.desktop.in
 --- drivel-1.2.1.orig/data/drivel.desktop.in	2004-10-01 10:30:36.711739632 +0200
 +++ drivel-1.2.1/data/drivel.desktop.in	2004-10-01 10:30:54.140090120 +0200
-@@ -6,5 +6,5 @@
- Terminal=0
+@@ -3,8 +3,9 @@
+ _GenericName=Journal Editor
+ _Comment=Update and manage your journal
+ Exec=drivel
+-Terminal=0
++Terminal=false
++Encoding=UTF-8
  Type=Application
  Icon=livejournal.png
 -Categories=GNOME;Application;Network
