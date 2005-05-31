@@ -1,37 +1,19 @@
-diff -urN drivel-1.2.1.orig/data/drivel.desktop.in drivel-1.2.1/data/drivel.desktop.in
---- drivel-1.2.1.orig/data/drivel.desktop.in	2004-10-01 10:30:36.711739632 +0200
-+++ drivel-1.2.1/data/drivel.desktop.in	2004-10-01 10:30:54.140090120 +0200
-@@ -3,8 +3,9 @@
+diff -ur drivel-1.3.90-orig/data/gnome-drivel.desktop.in drivel-1.3.90/data/gnome-drivel.desktop.in
+--- drivel-1.3.90-orig/data/gnome-drivel.desktop.in	2005-01-02 23:29:29.000000000 -0700
++++ drivel-1.3.90/data/gnome-drivel.desktop.in	2005-05-29 07:55:47.000000000 -0600
+@@ -4,11 +4,11 @@
  _GenericName=Journal Editor
- _Comment=Update and manage your journal
- Exec=drivel
+ _Comment=Update and manage your online journal
+ Exec=drivel %U
 -Terminal=0
 +Terminal=false
-+Encoding=UTF-8
  Type=Application
  Icon=livejournal.png
--Categories=GNOME;Application;Network
+ MimeType=application/x-drivel
+-Categories=GNOME;Application;Network;
 +Categories=GTK;GNOME;Network;
  StartupNotify=true
---- drivel-1.2.2/configure~	Wed Nov 10 12:48:06 2004
-+++ drivel-1.2.2/configure	Wed Nov 10 12:48:06 2004
-@@ -20248,7 +20248,7 @@
- 
- fi
- 
--ALL_LINGUAS="cs de en_CA en_GB es ja nl no pa pt pt_BR sq sr sr@Latn sv zh_CN"
-+ALL_LINGUAS="cs de en_CA en_GB es ja nb nl pa pt pt_BR sq sr sr@Latn sv zh_CN"
- 
- 
- for ac_header in locale.h
---- drivel-1.2.2/configure.ac~	Wed Nov 10 12:47:51 2004
-+++ drivel-1.2.2/configure.ac	Wed Nov 10 12:47:51 2004
-@@ -155,7 +155,7 @@
-    AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
- fi
- 
--ALL_LINGUAS="cs de en_CA en_GB es ja nl no pa pt pt_BR sq sr sr@Latn sv zh_CN"
-+ALL_LINGUAS="cs de en_CA en_GB es ja nb nl pa pt pt_BR sq sr sr@Latn sv zh_CN"
- AM_GLIB_GNU_GETTEXT
- 
- AC_OUTPUT([
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=drivel
+Only in drivel-1.3.90/data: gnome-drivel.desktop.in.orig
+Only in drivel-1.3.90/data: gnome-drivel.desktop.in.rej
