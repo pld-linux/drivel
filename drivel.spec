@@ -8,6 +8,7 @@ Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/drivel/%{name}-%{version}.tar.bz2
 # Source0-md5:	c03231f6dbcf93baed2cff354a2956a8
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-ipv6proxy.patch
 URL:		http://www.dropline.net/drivel/
 BuildRequires:	curl-devel
 BuildRequires:	gnome-vfs2-devel >= 2.6.0
@@ -34,6 +35,7 @@ o u¿ywalno¶ci. Prezentuje elegancki interfejs u¿ytkownika.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p0
 
 %build
 %configure \
