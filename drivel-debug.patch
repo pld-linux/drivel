@@ -1,0 +1,13 @@
+diff -urN drivel-2.0.1.org/src/xmlrpc.c drivel-2.0.1/src/xmlrpc.c
+--- drivel-2.0.1.org/src/xmlrpc.c	2005-06-19 07:06:51.000000000 +0200
++++ drivel-2.0.1/src/xmlrpc.c	2005-09-06 12:52:42.000000000 +0200
+@@ -41,7 +41,9 @@
+ 	GTimeVal value_time;
+ 	
+ 	g_return_if_fail (node);
++#ifndef __alpha__
+ 	g_return_if_fail (*args);
++#endif
+ 	
+ 	xml_param = NULL;
+ 	xml_value = NULL;
