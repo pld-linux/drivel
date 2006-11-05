@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 # duplicated with nb
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/no
+rm -rf $RPM_BUILD_ROOT%{_datadir}/{application-registry,mime-info}
 
 %find_lang %{name} --with-gnome
 
@@ -74,8 +75,6 @@ rm -r $RPM_BUILD_ROOT
 %dir %{_datadir}/drivel/languages
 %{_datadir}/drivel/languages/livejournal.lang
 %{_datadir}/drivel/glade/drivel.glade
-%{_datadir}/application-registry/drivel.applications
 %{_iconsdir}/gnome/48x48/mimetypes/gnome-mime-application-x-drivel.png
-%{_datadir}/mime-info/drivel.*
 %{_datadir}/mime/packages/drivel.xml
-%{_datadir}/omf/drivel/drivel-C.omf
+%{_omf_dest_dir}/drivel
