@@ -1,5 +1,5 @@
 Summary:	A LiveJournal client for GNOME
-Summary(pl):	Klient LiveJournala dla GNOME
+Summary(pl.UTF-8):   Klient LiveJournala dla GNOME
 Name:		drivel
 Version:	2.0.2
 Release:	1
@@ -28,10 +28,10 @@ Drivel is an advanced LiveJournal client for the GNOME desktop. While
 maintaining a full set of features, it had been designed with
 usability in mind, and presents an elegant user interface.
 
-%description -l pl
-Drivel to zaawansowany klient LiveJournala dla ∂rodowiska GNOME. Przy
-zachowaniu pe≥nego zbioru moøliwo∂ci, zosta≥ on zaprojektowany z my∂l±
-o uøywalno∂ci. Prezentuje elegancki interfejs uøytkownika.
+%description -l pl.UTF-8
+Drivel to zaawansowany klient LiveJournala dla ≈õrodowiska GNOME. Przy
+zachowaniu pe≈Çnego zbioru mo≈ºliwo≈õci, zosta≈Ç on zaprojektowany z my≈õlƒÖ
+o u≈ºywalno≈õci. Prezentuje elegancki interfejs u≈ºytkownika.
 
 %prep
 %setup -q
