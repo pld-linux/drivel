@@ -1,5 +1,5 @@
 Summary:	A LiveJournal client for GNOME
-Summary(pl.UTF-8):   Klient LiveJournala dla GNOME
+Summary(pl.UTF-8):	Klient LiveJournala dla GNOME
 Name:		drivel
 Version:	2.0.2
 Release:	1
