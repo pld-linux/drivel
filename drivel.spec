@@ -36,7 +36,7 @@ o używalności. Prezentuje elegancki interfejs użytkownika.
 %prep
 %setup -q
 #%patch0 -p1
-%patch1 -p1
+%patch -P1 -p1
 
 %build
 install /usr/share/automake/config.* .
